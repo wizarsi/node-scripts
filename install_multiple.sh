@@ -19,7 +19,7 @@ chmod +x ./multiple-cli
 chmod +x ./multiple-node
 
 # Добавление пути в системную переменную PATH
-sudo sed -i -e '$a\\nPATH=$PATH:/root/multipleforlinux/' /etc/profile
+echo -e "\nPATH=\$PATH:/root/multipleforlinux/" | sudo tee -a /etc/profile > /dev/null
 
 # Применение изменений в profile
 source /etc/profile
